@@ -2,12 +2,15 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables";
+
 // Variables
 @import "variables";
 
-// Bootstrap
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
 //Bulma
 @import "~bulma";
+
+
 @import "~animate.css/animate";
