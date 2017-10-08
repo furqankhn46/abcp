@@ -1,0 +1,15 @@
+$blue: hsl(211, 64%, 32%);
+$blue-invert: findColorInvert($blue);
+
+//respecify colors map to use new variables
+$colors: (
+     white: ($white, $black),
+     black: ($black, $white), 
+     light: ($light, $light-invert), 
+     dark: ($dark, $dark-invert), 
+     primary: ($primary, $primary-invert), 
+     info: ($info, $info-invert), 
+     success: ($success, $success-invert), 
+     warning: ($warning, $warning-invert), 
+     danger: ($danger, $danger-invert),
+     blue: ($blue, $blue-invert));

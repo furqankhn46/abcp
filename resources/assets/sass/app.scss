@@ -2,9 +2,7 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
-@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/_all.sass";
 
 // Variables
 @import "variables";
