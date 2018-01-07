@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/', function () {
+    return redirect('/login');
+})->name('welcome');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/users/create', 'UserController@create')->name('users.create');
+Route::post('/users/store', 'UserController@store')->name('users.store');

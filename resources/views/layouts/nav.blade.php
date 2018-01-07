@@ -5,7 +5,17 @@
             <a class="navbar-item" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Users
+                </a>
 
+                <div class="navbar-dropdown">
+                    <a href="{{ route('users.create') }}" class="navbar-item">
+                        Create
+                    </a>
+                </div>
+            </div>
             <button class="button navbar-burger">
             <span></span>
             <span></span>
@@ -14,9 +24,6 @@
         </div>
         <div id="soc-menu" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="#">
-                    Home
-                </a>
             </div>
             <div class="navbar-end">
                 @guest
@@ -26,10 +33,8 @@
                     <a class="navbar-item" href="#">
                         Welcome, {{ Auth::user()->name }}
                     </a>
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                            Logout
+                    <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}

@@ -19,7 +19,20 @@
     <div id="app">
         
         @include('layouts.nav')
-
+        @if(session()->has('flash'))
+            <section>
+                <div class="container has-text-centered">
+                    <div class="column is-8 is-offset-2">
+                        <div class="box">
+                            <div class="notification is-link">
+                                <button class="delete"></button>
+                                {!! session('flash') !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
         @yield('content')
 
     </div>
