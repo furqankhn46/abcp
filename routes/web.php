@@ -18,5 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/users', 'UserController@index')->name('users.index');
+
 Route::get('/users/create', 'UserController@create')->name('users.create');
 Route::post('/users/store', 'UserController@store')->name('users.store');
+Route::get('/users/{user}/edit', 'UserController@edit')->name('users.edit');
+Route::patch('/users/{user}/update', 'UserController@update')->name('users.update');

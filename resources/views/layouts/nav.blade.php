@@ -12,7 +12,38 @@
 
                 <div class="navbar-dropdown">
                     <a href="{{ route('users.create') }}" class="navbar-item">
-                        Create
+                        Create new user
+                    </a>
+                    <a href="{{ route('users.index') }}" class="navbar-item">
+                        All Users
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Products
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">
+                        Create new product
+                    </a>
+                    <a href="#" class="navbar-item">
+                        All Products
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Orders
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">
+                        Create new order
+                    </a>
+                    <a href="#" class="navbar-item">
+                        All Orders
                     </a>
                 </div>
             </div>

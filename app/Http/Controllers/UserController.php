@@ -14,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::paginate(20);
+        return view('users.index', ['users' => $users]);
     }
 
     /**
@@ -63,12 +64,12 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('users.edit', [ 'user' => $user ]);
     }
 
     /**
@@ -80,7 +81,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        #1. Validate data
+        #2. Update User and return back to Users list
+
+        return redirect()
+            ->back()
+            ->with('flash', 'User has been updated!');
     }
 
     /**
